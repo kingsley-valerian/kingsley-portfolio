@@ -60,15 +60,14 @@ export default function Home() {
 </div>
 
     <button
-      type="button"
-      className="mobile-menu-button"
-      onClick={() => setMenuOpen(!menuOpen)}
-      aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-      aria-expanded={menuOpen}
-    >
-      {menuOpen ? "Close" : "Menu"}
-    </button>
-
+  type="button"
+  className="mobile-menu-button"
+  onClick={() => setMenuOpen((open) => !open)}
+  aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+  aria-expanded={menuOpen}
+>
+  {menuOpen ? "Close" : "Menu"}
+</button>
     <a href="#contact" className="button button-primary">
       Work With Me
     </a>
