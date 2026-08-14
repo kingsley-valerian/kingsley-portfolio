@@ -358,14 +358,26 @@ email communication setup.
   <span>Web Widget</span>
 </div>
 
-<a
-  href="https://zohomail6649.freshdesk.com/a/solutions/articles/158000460296"
+<div className="project-actions">
+  <a
+    href="https://zohomail6649.freshdesk.com/a/solutions/articles/158000460296"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="button button-secondary"
+  >
+    View Project
+  </a>
+
+ <a
+  href="/freshdesk-case-study.pdf"
   target="_blank"
   rel="noopener noreferrer"
-  className="button button-secondary project-button"
+  className="button button-primary"
 >
-  View Project
+  View Case Study
 </a>
+</div>
+
 
       </article>
 
@@ -410,14 +422,25 @@ structured workflow for reviewing applications efficiently.
   <span>Workflow</span>
 </div>
 
-<a
-  href="https://airtable.com/appDrQHlMv1L7W1Wy/shrpFz6glawzBZxao"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="button button-secondary project-button"
->
-  View Project
-</a>
+<div className="project-actions">
+  <a
+    href="https://airtable.com/appDrQHlMv1L7W1Wy/shrpFz6glawzBZxao"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="button button-secondary"
+  >
+    View Project
+  </a>
+
+  <a
+    href="/airtable-case-study.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="button button-primary"
+  >
+    View Case Study
+  </a>
+</div>
       </article>
 
 
