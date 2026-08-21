@@ -92,23 +92,18 @@ export default function Home() {
       </p>
 
       <div className="hero-actions">
-
   <a href="#contact" className="button button-primary">
-    Work With Me
-  </a>
-
-  <a href="#projects" className="button button-secondary">
-    View Projects
+    Let's Work Together
   </a>
 
   <a
-    href="/Kingsley-Valerian-CV.pdf"
+    href="/Kingsley_Valerian_Master_CV.pdf"
     target="_blank"
+    rel="noopener noreferrer"
     className="button button-secondary"
   >
     View CV
   </a>
-
 </div>
 
       <div className="hero-meta">
