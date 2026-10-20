@@ -1,35 +1,31 @@
+
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Kingsley Valerian | Virtual Assistant",
+  title: "Kingsley Valerian | Full-Stack Developer & IT Support",
   description:
-    "Kingsley Valerian is a Virtual Assistant providing administrative support, customer support, CRM organization, and digital workflow assistance for businesses and remote teams.",
+    "Portfolio of Kingsley Valerian, showcasing full-stack web development, backend integrations, web applications, IT support, and digital projects.",
+  applicationName: "Kingsley Valerian Portfolio",
   keywords: [
     "Kingsley Valerian",
-    "Virtual Assistant",
-    "Executive Assistant",
-    "Administrative Assistant",
-    "Customer Support",
-    "CRM",
-    "Airtable",
-    "Freshdesk",
-    "Remote Virtual Assistant",
+    "Full-Stack Developer",
+    "Junior Full-Stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "IT Support",
+    "Web Development Portfolio",
   ],
-  authors: [{ name: "Kingsley Valerian" }],
-  creator: "Kingsley Valerian",
   openGraph: {
-    title: "Kingsley Valerian | Virtual Assistant",
+    title: "Kingsley Valerian | Full-Stack Developer",
     description:
-      "Virtual Assistant providing administrative support, customer support, CRM organization, and digital workflow assistance.",
+      "Explore web applications, business websites, and digital projects by Kingsley Valerian.",
     type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -39,11 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+    <html lang="en">
+      <body>
         {children}
         <Analytics />
       </body>
