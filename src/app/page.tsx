@@ -1,5 +1,7 @@
+﻿
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const services = [
@@ -82,8 +84,8 @@ const projects = [
     description:
       "A career platform designed to help job seekers discover opportunities, manage career profiles, tailor application documents with AI, and access subscription-based features.",
     role: "Full-Stack Development",
-    tools: "Next.js · React · TypeScript · Supabase",
-    work: "Authentication · Job Discovery · AI Features · Subscriptions",
+    tools: "Next.js Â· React Â· TypeScript Â· Supabase",
+    work: "Authentication Â· Job Discovery Â· AI Features Â· Subscriptions",
     tags: ["Next.js", "Supabase", "AI Integration", "Payments"],
     href: "https://more-dollar.vercel.app/",
     linkLabel: "Explore Project",
@@ -95,8 +97,8 @@ const projects = [
     description:
       "A fleet management application focused on vehicle tracking, owner and driver experiences, and subscription-based access to fleet management features.",
     role: "Full-Stack Product Development",
-    tools: "Next.js · React · Backend Integrations",
-    work: "User Roles · Fleet Management · Subscription Features",
+    tools: "Next.js Â· React Â· Backend Integrations",
+    work: "User Roles Â· Fleet Management Â· Subscription Features",
     tags: ["Web Applications", "Authentication", "Subscriptions"],
     href: "https://fleet-track-ehve.vercel.app/",
     linkLabel: "Explore Project",
@@ -109,7 +111,7 @@ const projects = [
       "A digital presence for a beverage brand, bringing its identity and business information together in an accessible online experience.",
     role: "Website Development",
     tools: "Web Technologies",
-    work: "Business Presentation · Website Experience",
+    work: "Business Presentation Â· Website Experience",
     tags: ["Business Website", "Web Development", "Responsive Design"],
     href: "https://kingsize-beverages.vercel.app/",
     linkLabel: "Visit Live Website",
@@ -121,8 +123,8 @@ const projects = [
     description:
       "Configured a customer support system for Stylex Systems Limited, including a knowledge base, support widget, ticket management workflow, and customer email communication setup.",
     role: "Support System Setup",
-    tools: "Freshdesk · Blogspot · Email",
-    work: "Knowledge Base · Ticketing · Web Widget",
+    tools: "Freshdesk Â· Blogspot Â· Email",
+    work: "Knowledge Base Â· Ticketing Â· Web Widget",
     tags: ["Freshdesk", "Knowledge Base", "Ticketing"],
     href: "https://zohomail6649.freshdesk.com/a/solutions/articles/158000460296",
     linkLabel: "View Support Project",
@@ -135,8 +137,8 @@ const projects = [
     description:
       "Built an application management workflow to collect candidate information, organize CV submissions, and structure application review.",
     role: "Workflow & Data Setup",
-    tools: "Airtable · Forms · Records",
-    work: "Application Form · Data Collection · Evaluation Workflow",
+    tools: "Airtable Â· Forms Â· Records",
+    work: "Application Form Â· Data Collection Â· Evaluation Workflow",
     tags: ["Airtable", "Forms", "Data Management"],
     href: "https://airtable.com/appDrQHlMv1L7W1Wy/shrpFz6glawzBZxao",
     linkLabel: "View Airtable Project",
@@ -207,25 +209,40 @@ export default function Home() {
           </a>
 
           <div className={`nav-links ${menuOpen ? "nav-links-open" : ""}`}>
-            <a href="#services" onClick={closeMenu}>Services</a>
-            <a href="#skills" onClick={closeMenu}>Skills</a>
-            <a href="#projects" onClick={closeMenu}>Projects</a>
-            <a href="#about" onClick={closeMenu}>About</a>
-            <a href="#contact" onClick={closeMenu}>Contact</a>
+            <a href="#services" onClick={closeMenu}>
+              Services
+            </a>
+            <a href="#skills" onClick={closeMenu}>
+              Skills
+            </a>
+            <a href="#projects" onClick={closeMenu}>
+              Projects
+            </a>
+            <Link href="/blog" onClick={closeMenu}>
+              Blog
+            </Link>
+            <a href="#about" onClick={closeMenu}>
+              About
+            </a>
+            <a href="#contact" onClick={closeMenu}>
+              Contact
+            </a>
           </div>
 
           <button
             type="button"
             className="mobile-menu-button"
             onClick={() => setMenuOpen((open) => !open)}
-            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={
+              menuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
             aria-expanded={menuOpen}
           >
             {menuOpen ? "Close" : "Menu"}
           </button>
 
           <a href="#contact" className="button button-primary nav-cta">
-            Let&apos;s Talk <span aria-hidden="true">↗</span>
+            Let&apos;s Talk <span aria-hidden="true">â†—</span>
           </a>
         </div>
       </nav>
@@ -240,11 +257,13 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-content reveal reveal-left">
             <p className="eyebrow hero-eyebrow">
-              FULL-STACK DEVELOPER <span>·</span> IT SUPPORT <span>·</span> DIGITAL OPERATIONS
+              FULL-STACK DEVELOPER <span>Â·</span> IT SUPPORT <span>Â·</span>{" "}
+              DIGITAL OPERATIONS
             </p>
 
             <h1 className="hero-title">
-              I build digital experiences that <span>move things forward.</span>
+              I build digital experiences that{" "}
+              <span>move things forward.</span>
             </h1>
 
             <p className="hero-description">
@@ -255,7 +274,7 @@ export default function Home() {
 
             <div className="hero-actions">
               <a href="#projects" className="button button-primary">
-                Explore My Work <span aria-hidden="true">↗</span>
+                Explore My Work <span aria-hidden="true">â†—</span>
               </a>
 
               <a
@@ -264,8 +283,12 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="button button-secondary"
               >
-                View My CV <span aria-hidden="true">↗</span>
+                View My CV <span aria-hidden="true">â†—</span>
               </a>
+
+              <Link href="/blog" className="button button-secondary">
+                Read My Blog <span aria-hidden="true">â†—</span>
+              </Link>
             </div>
 
             <div className="hero-meta">
@@ -307,18 +330,20 @@ export default function Home() {
           <span className="scroll-cue-line" />
         </a>
 
-        <span className="hero-index" aria-hidden="true">01 / 06</span>
+        <span className="hero-index" aria-hidden="true">
+          01 / 06
+        </span>
       </section>
 
       <section id="services" className="section cinematic-section">
         <div className="container">
           <div className="section-heading reveal">
-            <p className="eyebrow">01 — WHAT I DO</p>
+            <p className="eyebrow">01 â€” WHAT I DO</p>
             <h2>Technology and support for real-world needs.</h2>
             <p>
-              Good digital work is more than making something look right.
-              It should solve a problem, support people, and make everyday
-              tasks easier.
+              Good digital work is more than making something look right. It
+              should solve a problem, support people, and make everyday tasks
+              easier.
             </p>
           </div>
 
@@ -333,7 +358,7 @@ export default function Home() {
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <a href="#contact" className="text-link">
-                  Discuss a project <span aria-hidden="true">↗</span>
+                  Discuss a project <span aria-hidden="true">â†—</span>
                 </a>
               </article>
             ))}
@@ -341,15 +366,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="section section-secondary cinematic-section">
+      <section className="section section-secondary cinematic-section" id="skills">
         <div className="container">
           <div className="section-heading reveal">
-            <p className="eyebrow">02 — SKILLS & TECHNOLOGIES</p>
+            <p className="eyebrow">02 â€” SKILLS & TECHNOLOGIES</p>
             <h2>A practical mix of development and digital operations.</h2>
             <p>
               Tools and technologies I have used in projects or explored
-              through hands-on practice, with my strongest technical focus
-              on building and improving web applications.
+              through hands-on practice, with my strongest technical focus on
+              building and improving web applications.
             </p>
           </div>
 
@@ -377,7 +402,7 @@ export default function Home() {
       <section id="projects" className="section cinematic-projects">
         <div className="container">
           <div className="section-heading reveal">
-            <p className="eyebrow">03 — SELECTED WORK</p>
+            <p className="eyebrow">03 â€” SELECTED WORK</p>
             <h2>Ideas made real. Problems approached with purpose.</h2>
             <p>
               A selection of web applications, business websites, and digital
@@ -389,7 +414,9 @@ export default function Home() {
           <div className="projects-grid">
             {projects.map((project, index) => (
               <article
-                className={`card project-card reveal ${index === 0 ? "project-card-featured" : ""}`}
+                className={`card project-card reveal ${
+                  index === 0 ? "project-card-featured" : ""
+                }`}
                 key={project.number}
                 style={{ transitionDelay: `${(index % 2) * 120}ms` }}
               >
@@ -429,7 +456,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="button button-primary"
                   >
-                    {project.linkLabel} <span aria-hidden="true">↗</span>
+                    {project.linkLabel} <span aria-hidden="true">â†—</span>
                   </a>
 
                   {"caseStudy" in project && project.caseStudy && (
@@ -439,7 +466,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="button button-secondary"
                     >
-                      Case Study <span aria-hidden="true">↗</span>
+                      Case Study <span aria-hidden="true">â†—</span>
                     </a>
                   )}
                 </div>
@@ -451,16 +478,24 @@ export default function Home() {
             Each project reflects practical work across digital products,
             customer support, and business workflows.
           </p>
+
+          <div className="reveal" style={{ marginTop: "28px" }}>
+            <Link href="/blog" className="button button-secondary">
+              Read the stories behind my projects{" "}
+              <span aria-hidden="true">â†—</span>
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section id="about" className="section section-secondary cinematic-section">
+      <section
+        id="about"
+        className="section section-secondary cinematic-section"
+      >
         <div className="container about-grid">
           <div className="reveal reveal-left">
-            <p className="eyebrow">04 — A LITTLE ABOUT ME</p>
-            <h2>
-              Curious by nature. Practical in approach. Always building.
-            </h2>
+            <p className="eyebrow">04 â€” A LITTLE ABOUT ME</p>
+            <h2>Curious by nature. Practical in approach. Always building.</h2>
           </div>
 
           <div className="about-copy reveal reveal-right">
@@ -472,10 +507,10 @@ export default function Home() {
             </p>
 
             <p>
-              I approach projects by understanding the problem first,
-              breaking it into manageable steps, and choosing tools that
-              fit the task. I value clear communication, maintainable
-              solutions, and learning through building.
+              I approach projects by understanding the problem first, breaking
+              it into manageable steps, and choosing tools that fit the task. I
+              value clear communication, maintainable solutions, and learning
+              through building.
             </p>
 
             <p>
@@ -485,7 +520,7 @@ export default function Home() {
             </p>
 
             <a href="#contact" className="text-link">
-              Let&apos;s connect <span aria-hidden="true">↗</span>
+              Let&apos;s connect <span aria-hidden="true">â†—</span>
             </a>
           </div>
         </div>
@@ -495,7 +530,7 @@ export default function Home() {
         <div className="container">
           <div className="contact-card card reveal">
             <div className="contact-copy">
-              <p className="eyebrow">05 — LET&apos;S CONNECT</p>
+              <p className="eyebrow">05 â€” LET&apos;S CONNECT</p>
               <h2>Have a role, a project, or an idea worth building?</h2>
               <p>
                 I&apos;m open to opportunities in full-stack development,
@@ -512,10 +547,10 @@ export default function Home() {
 
             <div className="contact-actions">
               <a
-                href="mailto:kingsleyvalerian6@gmail.com"
+                href="mailto:kingsleyvalerian6@gmail.com?subject=Portfolio%20Inquiry"
                 className="button button-primary"
               >
-                Email Me <span aria-hidden="true">↗</span>
+                Email Me <span aria-hidden="true">â†—</span>
               </a>
 
               <a
@@ -524,7 +559,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="button button-secondary"
               >
-                LinkedIn Profile <span aria-hidden="true">↗</span>
+                LinkedIn Profile <span aria-hidden="true">â†—</span>
               </a>
 
               <a
@@ -533,7 +568,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-link"
               >
-                Find me on GitHub <span aria-hidden="true">↗</span>
+                Find me on GitHub <span aria-hidden="true">â†—</span>
               </a>
             </div>
           </div>
@@ -542,9 +577,12 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="container footer-inner">
-          <a href="#home" className="footer-brand">Kingsley Valerian</a>
-          <p>Full-Stack Development · IT Support · Digital Operations</p>
-          <p>© {new Date().getFullYear()} Kingsley Valerian</p>
+          <a href="#home" className="footer-brand">
+            Kingsley Valerian
+          </a>
+          <p>Full-Stack Development Â· IT Support Â· Digital Operations</p>
+          <p>Â© {new Date().getFullYear()} Kingsley Valerian</p>
+          <Link href="/blog">Blog</Link>
         </div>
       </footer>
     </main>
