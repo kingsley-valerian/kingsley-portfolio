@@ -1,4 +1,4 @@
-﻿
+
 "use client";
 
 import Link from "next/link";
@@ -49,7 +49,7 @@ export default function BlogPage() {
             <Link href="/">Portfolio</Link>
             <a href="#articles">Articles</a>
             <Link href="/#contact" className="blog-nav-cta">
-              Get in touch <span aria-hidden="true">â†—</span>
+              Get in touch <span aria-hidden="true">↗</span>
             </Link>
           </nav>
         </div>
@@ -59,7 +59,7 @@ export default function BlogPage() {
         <div className="blog-hero-glow" aria-hidden="true" />
         <div className="blog-container blog-hero-content">
           <p className="blog-eyebrow">
-            THE WORK Â· THE PROCESS Â· THE LESSONS
+            THE WORK · THE PROCESS · THE LESSONS
           </p>
 
           <h1>
@@ -75,10 +75,10 @@ export default function BlogPage() {
 
           <div className="blog-hero-actions">
             <a href="#articles" className="blog-button blog-button-primary">
-              Explore the stories <span aria-hidden="true">â†“</span>
+              Explore the stories <span aria-hidden="true">↓</span>
             </a>
             <Link href="/" className="blog-button blog-button-secondary">
-              Back to portfolio <span aria-hidden="true">â†—</span>
+              Back to portfolio <span aria-hidden="true">↗</span>
             </Link>
           </div>
 
@@ -108,7 +108,7 @@ export default function BlogPage() {
               <div className="blog-featured-copy">
                 <span className="blog-category">{featuredPost.category}</span>
                 <p className="blog-post-meta">
-                  {featuredPost.readTime} <span>Â·</span> Featured story
+                  {featuredPost.readTime} <span>·</span> Featured story
                 </p>
                 <h3>{featuredPost.title}</h3>
                 <p>{featuredPost.excerpt}</p>
@@ -124,7 +124,7 @@ export default function BlogPage() {
                     href={`/blog/${featuredPost.slug}`}
                     className="blog-button blog-button-primary"
                   >
-                    Read the story <span aria-hidden="true">â†—</span>
+                    Read the story <span aria-hidden="true">↗</span>
                   </Link>
                   <a
                     href={featuredPost.projectUrl}
@@ -132,7 +132,7 @@ export default function BlogPage() {
                     rel="noopener noreferrer"
                     className="blog-text-link"
                   >
-                    Visit live project <span aria-hidden="true">â†—</span>
+                    Visit live project <span aria-hidden="true">↗</span>
                   </a>
                 </div>
               </div>
@@ -158,7 +158,7 @@ export default function BlogPage() {
           </div>
 
           <label className="blog-search">
-            <span aria-hidden="true">âŒ•</span>
+            <span aria-hidden="true">⌕</span>
             <input
               type="search"
               value={search}
@@ -235,7 +235,7 @@ export default function BlogPage() {
 
                     <div className="blog-post-card-actions">
                       <Link href={`/blog/${post.slug}`}>
-                        Read article <span aria-hidden="true">â†—</span>
+                        Read article <span aria-hidden="true">↗</span>
                       </Link>
                       <a
                         href={post.projectUrl}
@@ -243,7 +243,7 @@ export default function BlogPage() {
                         rel="noopener noreferrer"
                         aria-label={`${post.projectLabel} in a new tab`}
                       >
-                        Live project â†—
+                        Live project ↗
                       </a>
                     </div>
                   </div>
@@ -283,13 +283,13 @@ export default function BlogPage() {
           </p>
           <div className="blog-hero-actions">
             <Link href="/" className="blog-button blog-button-primary">
-              Explore my portfolio <span aria-hidden="true">â†—</span>
+              Explore my portfolio <span aria-hidden="true">↗</span>
             </Link>
             <a
               href="mailto:kingsleyvalerian6@gmail.com?subject=Portfolio%20Inquiry"
               className="blog-button blog-button-secondary"
             >
-              Start a conversation <span aria-hidden="true">â†—</span>
+              Start a conversation <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
@@ -302,7 +302,7 @@ export default function BlogPage() {
             Kingsley Valerian
           </Link>
           <p>Built with curiosity. Documented through experience.</p>
-          <Link href="/">Return to portfolio â†‘</Link>
+          <Link href="/">Return to portfolio ↑</Link>
         </div>
       </footer>
     </main>
